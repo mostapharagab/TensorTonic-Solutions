@@ -6,4 +6,6 @@ def dot_product(x: list, y: list) -> float:
     """
     # Write code here
     
-    return float(sum(a*b for a,b in zip(x,y)))
+    x = np.asarray(x, dtype=float)
+    y = np.asarray(y, dtype=float)
+    return float(np.dot(x,y))
